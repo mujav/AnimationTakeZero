@@ -1,0 +1,770 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    min-height: 100vh;
+    align-items:center end;
+    display: flex;
+    justify-content:end center;
+    perspective: 2000px;
+    background: linear-gradient(
+        to right,
+        rgba(71, 194, 194, 0.479),
+        rgba(0, 0, 0, 0) );
+}
+
+
+
+.navbar {
+    transform-style: preserve-3d;
+    background: transparent;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 30px 30px;
+    width: 1400px;
+    height: 120px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: absolute;
+    top: -40px;
+    z-index: 999;
+    transition: all 0.75s ease-out;
+}
+
+.navbar__container {
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 50px;
+    margin-top: 40px;
+    transition: all 0.75s ease-out;
+}
+
+.logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, rgba(245, 173, 66, 0.75) 0% ,
+    rgba(8, 156, 156, 0.75) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.fa-shoe-prints {
+    margin-right: 0.5rem;
+    
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    transition: all 0.75s ease-out;
+}
+
+.navbar__item {
+    height: 80px;
+    transition: all 0.75s ease-out;
+}
+
+.navbar__links {
+    color:rgb(8, 156, 165);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    transition: all 0.75s ease-out;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    transition: all 0.75s ease-out;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(8, 156, 165);
+    color: #fff;
+    transition: all 0.75s ease-out;
+}
+
+/*.button:hover {
+    background: rgba(245, 173, 66);
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: rgba(245, 173, 66);
+    transition: all 0.3s ease;
+}*/
+
+/*@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        background: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+*/
+
+
+.container {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.card {
+    transform-style: preserve-3d;
+    height: 80vh;
+    width: 24rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    z-index: 1;
+    
+}
+
+
+.sneakers {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakers img {
+    width: 18rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 173, 66, 0.75),
+        rgba(8, 156, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+.info h1 {
+    font-size: 2.5rem;
+    transition: all 0.75s ease-out;
+}
+
+.info h3 {
+    font-size: 1rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+
+.sizes {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    
+}
+
+.sizes button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background-color: rgb(240, 236, 229);
+}
+
+button.active {
+    background: #585858;
+    color: white;
+}
+
+.purchase {
+    margin-top: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase button {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #43ce89;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+
+
+
+.container1 {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 50px;
+    
+}
+
+.card1 {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 24rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+
+.sneakers1 {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakers1 img {
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle1 {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 173, 66, 0.75),
+        rgba(8, 156, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+.info1 h1 {
+    font-size: 2.5rem;
+    transition: all 0.75s ease-out;
+}
+
+.info1 h3 {
+    font-size: 1rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+
+.sizes1 {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    
+}
+
+.sizes1 button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background-color: rgb(240, 236, 229);
+}
+
+button.active1 {
+    background: #585858;
+    color: white;
+}
+
+.purchase1 {
+    margin-top: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase1 button {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #43ce89;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+.container2 {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 50px;
+    
+}
+
+.card2 {
+    transform-style: preserve-3d;
+    min-height: 80vh;
+    width: 24rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+}
+
+
+.sneakers2 {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakers2 img {
+    width: 20rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle2 {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 173, 66, 0.75),
+        rgba(8, 156, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+.info2 h1 {
+    font-size: 2.5rem;
+    transition: all 0.75s ease-out;
+}
+
+.info2 h3 {
+    font-size: 1rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+
+.sizes2 {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    
+}
+
+.sizes2 button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background-color: rgb(240, 236, 229);
+}
+
+button.active2 {
+    background: #585858;
+    color: white;
+}
+
+.purchase2 {
+    margin-top: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase2 button {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #43ce89;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+
+/*
+
+.container3 {
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 50px;
+    z-index: 1;
+    display:grid;
+    top: 730px;
+    grid-template-columns: 2fr 2fr;
+}
+
+.card3 {
+    transform-style: preserve-3d;
+    height: 80vh;
+    width: 24rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    z-index: 1;
+    
+}
+
+
+.sneakers3 {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakers3 img {
+    width: 18rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle3 {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 173, 66, 0.75),
+        rgba(8, 156, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+.info3 h1 {
+    font-size: 2.5rem;
+    transition: all 0.75s ease-out;
+}
+
+.info3 h3 {
+    font-size: 1rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+
+.sizes3 {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    
+}
+
+.sizes3 button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background-color: rgb(240, 236, 229);
+}
+
+button.active3 {
+    background: #585858;
+    color: white;
+}
+
+.purchase3 {
+    margin-top: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase3 button {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #43ce89;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}
+
+
+
+
+
+.container4 {
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-top: 50px;
+    z-index: 1;
+    display:grid;
+    top: 730px;
+    grid-template-columns: 2fr 2fr;
+}
+
+.card4{
+    transform-style: preserve-3d;
+    height: 80vh;
+    width: 24rem;
+    border-radius: 30px;
+    padding: 0rem 5rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    z-index: 1;
+    
+}
+
+
+.sneakers4 {
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sneakers4 img {
+    width: 18rem;
+    z-index: 2;
+    transition: all 0.75s ease-out;
+}
+
+.circle4 {
+    width: 15rem;
+    height: 15rem;
+    background: linear-gradient(
+        to right,
+        rgba(245, 173, 66, 0.75),
+        rgba(8, 156, 156, 0.75)
+    );
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+.info4 h1 {
+    font-size: 2.5rem;
+    transition: all 0.75s ease-out;
+}
+
+.info4 h3 {
+    font-size: 1rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    font-weight: lighter;
+    transition: all 0.75s ease-out;
+}
+
+
+.sizes4 {
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.75s ease-out;
+    
+}
+
+.sizes4 button {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #585858;
+    background-color: rgb(240, 236, 229);
+}
+
+button.active4 {
+    background: #585858;
+    color: white;
+}
+
+.purchase4 {
+    margin-top: 2rem;
+    transition: all 0.75s ease-out;
+}
+
+.purchase4 button {
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 1rem 0rem;
+    background: #43ce89;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+}*/
